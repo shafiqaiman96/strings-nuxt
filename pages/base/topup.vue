@@ -50,8 +50,8 @@
                                 <b-form-input id="topupAmount" type="text" placeholder="10"></b-form-input>
                             </b-form-group>
                             <div slot="footer" style="float: right">
-                                <b-button size="sm" variant="success" type="button" @click="warningModal = true"><i class="fa fa-check"></i> Proceed</b-button>
-                                <b-button type="reset" size="sm" variant="danger"><i class="fa fa-ban"></i> Amend</b-button>
+                              <b-button type="reset" size="sm" variant="danger"><i class="fa fa-ban"></i> Amend</b-button>
+                              <b-button size="sm" variant="success" type="button" @click="warningModal = true"><i class="fa fa-check"></i> Proceed</b-button>
                             </div>
                           </b-card-body>
                         </b-card>
@@ -73,13 +73,14 @@
     data () {
       return {
         showCollapse: true,
+        warningModal: false,
       }
     },
-      name: 'modals',
-  data () {
-    return {
-      warningModal: false,
-    }
-  }
+  //     name: 'modals',
+  // data () {
+  //   return {
+  //     warningModal: false,
+  //   }
+  // }
   }
 </script>

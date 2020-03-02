@@ -42,7 +42,7 @@
 
  <!-- To stops the page from jumping when a link is clicked 
         we use the "prevent" modifier (short for preventDefault). -->
-<a style="float-left; padding-left:30px;" href="/"><i class="fa fa-home fa-2x" aria-hidden="true"></i> </a>
+<a style="float-left; padding-left:50px;" href="/"><i class="fa fa-home fa-3x" aria-hidden="true"></i> </a>
  <nav v-bind:class="activeClass" v-for="routes in itemNav" v-bind:key="routes.id">
   <a :class="{ 'active': index === 0 }"><nuxt-link :to="`${routes.url}`">{{routes.name}}</nuxt-link></a>
   <!-- <a href="#" class="projects" v-on:click="makeActive('projects')"><nuxt-link to="/base/profile">Projects</nuxt-link></a>
@@ -110,11 +110,11 @@
       },
       {
         name: 'Investment and Loans',
-        url: '/pages/404',
+        url: '/pages/maintenance',
       },
       {
         name: 'Insurance',
-        url: '/pages/500',
+        url: '/pages/maintenance',
       },
       {
         name: 'Payment',

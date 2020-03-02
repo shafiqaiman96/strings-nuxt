@@ -59,13 +59,14 @@
     data () {
       return {
         showCollapse: true,
+         warningModal: false,
       }
     },
-      name: 'modals',
-  data () {
-    return {
-      warningModal: false,
-    }
-  }
+  //     name: 'modals',
+  // data () {
+  //   return {
+     
+  //   }
+  // }
   }
 </script>

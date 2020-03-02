@@ -78,21 +78,21 @@
     </div>
         <b-row>
       <b-col sm="6" md="4">
-        <a href="/base/accounts">
+        <a href="/base/account">
           <b-card class="card-accent-primary" header="Accounts & Banking" style="color: black">
             View and manage your accounts.
           </b-card>
         </a>
       </b-col>
       <b-col sm="6" md="4">
-        <a href="/pages/500">
+        <a href="/pages/maintenance">
           <b-card class="card-accent-secondary" header="Investment & Loans" style="color: black">
             Trade and manage using Online Stocks. View and manage your home or car loans.
           </b-card>
         </a>
       </b-col>
       <b-col sm="6" md="4">
-        <a href="/pages/404">
+        <a href="/pages/maintenance">
           <b-card class="card-accent-success" header="Insurance" style="color: black">
             Renew your insurance policy or purchase PA online.
           </b-card>
@@ -127,23 +127,23 @@
 </template>
 
 <script>
-  export default {
-    name: 'carousels',
-    data () {
-      return {
-        slide: 0,
-        sliding: null
-      }
-    },
-    methods: {
-      onSlideStart (slide) {
-        this.sliding = true
-      },
-      onSlideEnd (slide) {
-        this.sliding = false
-      }
-    }
-  }
+  // export default {
+  //   name: 'carousels',
+  //   data () {
+  //     return {
+  //       slide: 0,
+  //       sliding: null
+  //     }
+  //   },
+  //   methods: {
+  //     onSlideStart (slide) {
+  //       this.sliding = true
+  //     },
+  //     onSlideEnd (slide) {
+  //       this.sliding = false
+  //     }
+  //   }
+  // }
 </script>
 
 <script>
@@ -163,11 +163,11 @@ export default {
       },
       {
         name: 'Investment and Loans',
-        url: '/pages/404',
+        url: '/pages/maintenance',
       },
       {
         name: 'Insurance',
-        url: '/pages/500',
+        url: '/pages/maintenance',
       },
       {
         name: 'Payment',
