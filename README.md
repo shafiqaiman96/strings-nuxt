@@ -9,9 +9,6 @@ Unofficial Nuxt + CoreUI project, free to use boilerplate for every need. For mo
 If you want to use this boilerplate, make sure you already installed [NodeJS](https://nodejs.org/en/) and [Vue CLI](https://www.npmjs.com/package/vue-cli) on your local machine. And then, you can use below command to download this boilerplate.
 
 ``` bash
-$ vue init muhibbudins/nuxt-coreui my-project  
-$ cd my-project
-
 # install dependencies
 $ npm install # Or yarn install
 ```
