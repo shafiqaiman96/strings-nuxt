@@ -1,5 +1,5 @@
 <template>
-<div> <img src="https://strings.my/wp-content/uploads/2019/10/strings-9.png" style="width:200px; float: left; padding: 20px">
+<div>
   <div class="app flex-row align-items-center">
     <div class="container">
       <b-row class="justify-content-center">
@@ -22,31 +22,34 @@
                 <input type="text" class="form-control" placeholder="Email">
               </b-input-group>
 
-              <!-- <b-input-group class="mb-3">
+              <b-input-group class="mb-3">
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-lock"></i></b-input-group-text>
                 </b-input-group-prepend>
-                <input type="password" class="form-control" placeholder="Password">
-              </b-input-group>
+                <input  class="form-control" placeholder="Password" :id='{valid:passwordValidation.valid}' :type="passwordVisible ? 'text' : 'password'" v-model="password">
+				<button class="visibility" tabindex='-1' @click='togglePasswordVisibility' :arial-label='passwordVisible ? "Hide password" : "Show password"'>
+			<i class="material-icons">{{ passwordVisible ? "hide" : "show" }}</i>
+		</button>
+			  </b-input-group>
 
               <b-input-group class="mb-4">
                 <b-input-group-prepend>
                   <b-input-group-text><i class="icon-lock"></i></b-input-group-text>
                 </b-input-group-prepend>
-                <input type="password" class="form-control" placeholder="Repeat password">
-              </b-input-group> -->
+                <input class="form-control" placeholder="Repeat password"  type="text" v-model.lazy='checkPassword'>
+              </b-input-group>
 
 
-	<div class="password"><b-input-group-text style="height:35px;  border-radius: 5px 0px 0px 5px;"><i class="icon-lock"></i></b-input-group-text>
+	<!-- <div class="password"><b-input-group-text style="height:35px;  border-radius: 5px 0px 0px 5px;"><i class="icon-lock"></i></b-input-group-text>
 		<input :class='{valid:passwordValidation.valid}' :type="passwordVisible ? 'text' : 'password'" v-model="password">
 		<button class="visibility" tabindex='-1' @click='togglePasswordVisibility' :arial-label='passwordVisible ? "Hide password" : "Show password"'>
 			<i class="material-icons">{{ passwordVisible ? "hide" : "show" }}</i>
 		</button>
-	</div>
-	<div class="password">
+	</div> -->
+	<!-- <div class="password">
 	<b-input-group-text style="height:35px;  border-radius: 5px 0px 0px 5px;"><i class="icon-lock"></i></b-input-group-text>
 	<input type="password" v-model.lazy='checkPassword'>
-	</div>
+	</div> -->
 
 	<transition name="hint" appear>
 		<div v-if='passwordValidation.errors.length > 0 && !submitted' class='hints'>
@@ -236,7 +239,7 @@ input + button {
 // 	}
 // }
 [type=password] {
-	letter-spacing:.2em;
+	// letter-spacing:.2em;
 }
 
 .hint {
